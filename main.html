@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link src="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        #loginbut {
+            font-size: 25px;
+            margin-top: 20px;
+            padding: 5px;
+            padding-right: 25px;
+            padding-left: 20px;
+            background-color: #00923B;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .s2 .col-4 {
+            width: 409px;
+            height: 409px;
+            background: url("event-icon.png");
+            opacity: 0, 6;
+            color: white;
+            border-radius: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .top-flex {
+            padding-top: 35px;
+            display: flex;
+        }
+
+        .event-date {
+            margin-left: 20px;
+        }
+
+        .events-title {
+            font-size: 45px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .format {
+            font-size: 14px;
+            background-color: #00923B;
+            padding: 8px;
+            margin-left: 137px;
+            position: relative;
+            top: -10px;
+            right: -9px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .block-desc i {
+            margin-right: 20px;
+            color: #00923B;
+            font-size: 20px;
+        }
+
+        .block-desc {
+            text-align: center;
+            margin-top: 5px;
+            font-weight: 700;
+        }
+
+        #loginbut i {
+            font-size: 24px;
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+
+
+        #loginbut img {
+            margin-left: 10px;
+        }
+
+        #title {
+            margin-top: 225px;
+            color: white;
+            font-size: 100px;
+            margin-bottom: 15px;
+        }
+
+        #events {
+            color: white;
+            font-size: 45px;
+            padding-top: 70px;
+        }
+
+        #desc {
+            font-size: 25px;
+            color: white;
+        }
+
+        #but-event {
+            display: flex;
+            width: 247px;
+            padding: 14px 24px;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 1000px;
+            border: 1px solid #00923B;
+            margin-top: 75px;
+            margin-left: 700px;
+        }
+
+        #but-event:hover {
+            color: #00923B;
+        }
+
+        .btn-primary {
+            --bs-btn-color: #ffffff;
+            --bs-btn-bg: #0d6dfd00;
+            --bs-btn-border-color: #0d6dfd00;
+            --bs-btn-hover-color: #000000;
+            --bs-btn-hover-bg: #2b2d3000;
+            --bs-btn-hover-border-color: #00000000;
+            --bs-btn-active-color: #000000;
+            --bs-btn-active-bg: #0a57ca00;
+            --bs-btn-active-border-color: rgba(10, 82, 190, 0);
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #000000;
+            --bs-btn-disabled-bg: #0d6dfd00;
+            --bs-btn-disabled-border-color: #0d6dfd00;
+        }
+
+        header {
+            background-color: #00c24ede;
+            position: absolute;
+            width: 100%;
+        }
+
+        body {
+            background-color: #000;
+            font-family: "GT Eesti Pro Display";
+        }
+
+        .form-control::placeholder {
+            color: white;
+        }
+
+        .form-control {
+            background-color: #00410583;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .s1 {
+            background-image: url("vkfest.png");
+            height: 750px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .s3 {
+            height: 430px;
+            margin-top: 30px;
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+            justify-content: space-around;
+            background-color: #15171F;
+        }
+
+        .s3 img {
+            width: 380px;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+
+        .s3-title {
+            font-size: 72px;
+            color: white;
+            margin-top: 100px;
+        }
+
+        .s3-desc {
+            color: white;
+            font-size: 60px;
+
+        }
+
+        .s3 .row {
+            line-height: inherit;
+        }
+
+        .s2 {
+            height: 1100px;
+        }
+
+        #login-event {
+            background-color: #00923B;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        footer i {
+            font-size: 50px;
+            background-color: #01001b;
+        }
+
+        footer {
+            height: 250px;
+            vertical-align: middle;
+            background-color: #0d071b;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            margin-top:50px;
+        }
+    </style>
+    <title>Мероприятия в Грозном для школьников. J - Guide</title>
+</head>
+
+<body class="bg-black">
+    <header>
+        <div class="container pt-2 pb-2">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="#" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <img src="SchoolGuide.png">
+                </a>
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a href="#" class="nav-link text-black">
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-black">
+                            Мероприятия
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-black">
+                            О нас
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-black">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <div class="px-3 py-2 text-center">
+                    <div class="container d-flex flex-wrap justify-content-center">
+                        <form action="">
+                            <div class="input-group">
+                                <div class="form-outline">
+                                    <input id="search-focus" type="search" id="form1" class="form-control"
+                                        placeholder="Искать мероприятие" />
+                                </div>
+                                <button type="button" class="btn btn-primary">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="login">
+                    <a name="" id="" class="btn btn-primary" href="#" role="button">Войти</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <main>
+        <section class="s1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" id="title">
+                        Ingenium 2023
+                    </div>
+                    <div class="col-12" id="desc">
+                        Дети получат возможность раскрыть свой творческий потенциал,<br> создав уникальные проекты от идеи до реализации.
+                    </div>
+                    <div class="col-12">
+                        <a name="" id="loginbut" class="btn btn-primary" href="#" role="button">Зарегистрироваться<i
+                                class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s2">
+            <div class="container">
+                <div class="row justify-content-around">
+                    <div class="col" id="events">
+                        Мероприятия
+                    </div>
+                    <div class="col">
+                        <a name="" id="but-event" class="btn btn-primary" href="#" role="button">Все мероприятия</a>
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    <div class="col-4">
+                        <div class="top-flex">
+                            <div class="event-date">
+                               23 декабря 10:00 
+                            </div>
+                            <div class="format">Оффлайн</div>
+                        </div>
+                        <div class="events-title">
+                            Ingenium 2023
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Развивайте навыки в IT
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Набирайтесь опыта в командной работе
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Найдите новых друзей
+                        </div>
+                        <a name="" id="login-event" class="btn btn-primary" href="#"
+                            role="button">Зарегистрироваться</a>
+                    </div>
+                    <div class="col-4">
+                        <div class="top-flex">
+                            <div class="event-date">
+                                23 декабря 10:00
+                            </div>
+                            <div class="format">Оффлайн</div>
+                        </div>
+                        <div class="events-title">
+                            Ingenium 2023
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Развивайте навыки в IT
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>абирайтесь опыта в командной работе
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Найдите новых друзей
+                        </div>
+                        <a name="" id="login-event" class="btn btn-primary" href="#"
+                            role="button">Зарегистрироваться</a>
+                    </div>
+                    <div class="col-4">
+                        <div class="top-flex">
+                            <div class="event-date">
+                                23 декабря 10:00
+                            </div>
+                            <div class="format">Оффлайн</div>
+                        </div>
+                        <div class="events-title">
+                            Ingenium 2023
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Развивайте навыки в IT
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>набирайтесь опыта в командной работе
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Найдите новых друзей
+                        </div>
+                        <a name="" id="login-event" class="btn btn-primary" href="#"
+                            role="button">Зарегистрироваться</a>
+                    </div>
+                    <div class="col-4">
+                        <div class="top-flex">
+                            <div class="event-date">
+                                23 декабря 10:00
+                            </div>
+                            <div class="format">Оффлайн</div>
+                        </div>
+                        <div class="events-title">
+                            Ingenium 2023
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Развивайте навыки в IT
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>набирайтесь опыта в командной работе
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Найдите новых друзей
+                        </div>
+                        <a name="" id="login-event" class="btn btn-primary" href="#"
+                            role="button">Зарегистрироваться</a>
+                    </div>
+                    <div class="col-4">
+                        <div class="top-flex">
+                            <div class="event-date">
+                                23 декабря 10:00
+                            </div>
+                            <div class="format">Оффлайн</div>
+                        </div>
+                        <div class="events-title">
+                            Ingenium 2023
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Развивайте навыки в IT
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>набирайтесь опыта в командной работе
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Найдите новых друзей
+                        </div>
+                        <a name="" id="login-event" class="btn btn-primary" href="#"
+                            role="button">Зарегистрироваться</a>
+                    </div>
+                    <div class="col-4">
+                        <div class="top-flex">
+                            <div class="event-date">
+                                23 декабря 10:00
+                            </div>
+                            <div class="format">Оффлайн</div>
+                        </div>
+                        <div class="events-title">
+                            Ingenium 2023
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Развивайте навыки в IT
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>набирайтесь опыта в командной работе
+                        </div>
+                        <div class="block-desc">
+                            <i class="bi bi-check2"></i>Найдите новых друзей
+                        </div>
+                        <a name="" id="login-event" class="btn btn-primary" href="#"
+                            role="button">Зарегистрироваться</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s3">
+            <div class="container">
+                <div class="row">
+                    <div class="col"><img src="mail.png"></div>
+                    <div class="col">
+                        <div class="s3-title">
+                            Остались вопросы?
+                        </div>
+                        <div class="s3-desc">
+                            - schoolguide@gmail.com
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-text">
+                        Мы в соцсетях
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="social">
+                        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <i class="bi bi-telegram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link text-white">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center text-white">
+                    © SchoolGuide 2023. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
